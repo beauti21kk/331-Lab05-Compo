@@ -28,5 +28,5 @@ function edit(){
 
 <template>
     <p>Edit the event here</p>
-    <button @click="edit">Edit Me</button>
+    <button @click="edit" class="shadow-lg border-2 border-sky-600 rounded-md w-24 hover:bg-lime-400 hover:border-transparent">Edit Me</button>
 </template>

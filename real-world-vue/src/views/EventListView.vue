@@ -53,7 +53,7 @@ const hasNextPage = computed(() => {
 <template>
   <main class="flex flex-col items-center">
     <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
-    <div class="pagination">
+    <div class="bg-emerald-400 w-24 text-center rounded-md">
       <RouterLink
         :to="{ name: 'EventList', query: { page: page - 1 } }"
         rel="prev"

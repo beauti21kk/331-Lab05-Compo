@@ -1,42 +1,49 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { useMessageStore } from '@/stores/message';
-import { storeToRefs } from 'pinia';
+import { useMessageStore } from '@/stores/message'
+import { storeToRefs } from 'pinia'
 const store = useMessageStore()
 const { message } = storeToRefs(store)
-import {ref} from 'vue'
+import { ref } from 'vue'
 const sizes = ref<number>(2)
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+  <div>
+    <img
+      alt="Vue logo"
+      class="mt-5 m-auto mb-10 object-center h-28 w-72"
+      src="@/assets/logo.svg"
+      width="125"
+      height="125"
+    />
+  </div>
   <header class="max-h-screen leading-normal">
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <!-- <div class="wrapper"> -->
+    <!-- <HelloWorld msg="You did it!" /> -->
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink :to="{name: 'EventList'}">Home</RouterLink>
-        <RouterLink :to="{name: 'about'}">About</RouterLink>
-        <RouterLink :to="{name: 'category'}">Category</RouterLink>
-        <RouterLink :to="{name: 'student'}">Student</RouterLink>
-        <div id="flashMessage" v-if="message">
-          <h4>{{ message }}</h4>
-        </div>
-      </nav>
-        <RouterView :size="sizes"/>
-      <!-- <h1>Events For Good</h1> --> 
-    </div>
+    <nav class="sm:flex justify-center items-center">
+      <div class="space-x-5">
+        <RouterLink class="hover:bg-lime-400 hover:text-white" :to="{ name: 'EventList' }">Home</RouterLink>
+        <RouterLink class="hover:bg-lime-400 hover:text-white" :to="{ name: 'about' }">About</RouterLink>
+        <RouterLink class="hover:bg-lime-400 hover:text-white" :to="{ name: 'category' }">Category</RouterLink>
+        <RouterLink class="hover:bg-lime-400 hover:text-white" :to="{ name: 'student' }">Student</RouterLink>
+      </div>
+      <div id="flashMessage" v-if="message">
+        <h4>{{ message }}</h4>
+      </div>
+    </nav>
+    <!-- <h1>Events For Good</h1> -->
+    <!-- </div> -->
   </header>
+  <RouterView />
 </template>
 
 <style scoped>
-
-.logo {
+/* .logo {
   display: block;
   margin: 0 auto 2rem;
-}
+} */
 
 nav {
   width: 100%;

@@ -29,5 +29,5 @@ function register() {
 
 <template>
     <p>Registration from here</p>
-    <button @click="register">Register Me</button>
+    <button @click="register" class="shadow-lg border-2 border-sky-600 rounded-md w-24 hover:bg-lime-400 hover:border-transparent">Register Me</button>
 </template>

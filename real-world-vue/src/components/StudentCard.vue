@@ -1,8 +1,11 @@
 <template>
-    <div class="event-card">
+  <div class="no-underline	text-sky-800">
+      <div class="p-5	w-64 cursor-pointer	border-2 border-solid	border-slate-500 mb-11">
       <span> @{{ student?.name }} on {{ student?.surname }} </span>
       <h4>{{ student?.gpa }}</h4>
     </div>
+  </div>
+
   </template>
 
   <script setup lang="ts">

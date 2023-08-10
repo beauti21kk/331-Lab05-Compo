@@ -1,6 +1,6 @@
 <template>
-    <div class="event-class">
-      <div class="event-card">
+    <div class="no-underline	text-sky-800">
+      <div class="p-5	w-64 cursor-pointer	border-2 border-solid	border-slate-500 mb-11">
         <h4>{{ event.title }}</h4>
         <h4>Category: {{ event.category }}</h4>
       </div>
